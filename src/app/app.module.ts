@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { ExampleComponent } from './example/example.component';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { ExampleComponent } from './example/example.component';
     ExampleComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgxSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
