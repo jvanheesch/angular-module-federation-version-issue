@@ -18,3 +18,10 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+// https://stackoverflow.com/a/70621359/23178651
+// https://github.com/angular-architects/module-federation-plugin/issues/137
+Cypress.on('uncaught:exception', err => {
+  if (err.message.includes(`Cannot use 'import.meta' outside a module`)) {
+    return false;
+  } else return true;
+});
